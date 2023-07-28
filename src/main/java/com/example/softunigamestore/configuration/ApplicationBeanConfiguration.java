@@ -1,2 +1,14 @@
-package com.example.softunigamestore.configuration;public class ApplicationBeanConfiguration {
+package com.example.softunigamestore.configuration;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class ApplicationBeanConfiguration {
+
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }
 }
