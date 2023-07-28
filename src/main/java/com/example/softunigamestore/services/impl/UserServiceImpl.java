@@ -40,6 +40,10 @@ public class UserServiceImpl implements UserService {
 
         User user = modelMapper.map(userRegisterDto, User.class);
 
+        if(userRepository.count() < 1) {
+            user.setAdmin(true);
+        }
+
         userRepository.save(user);
     }
 }

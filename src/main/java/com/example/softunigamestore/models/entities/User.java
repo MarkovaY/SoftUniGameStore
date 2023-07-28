@@ -16,7 +16,7 @@ public class User extends BaseEntity{
     private String password;
     private String fullName;
     private Set<Game> games;
-    private boolean isAdmin;
+    private Boolean isAdmin;
 
     @ManyToMany
     public Set<Game> getGames() {
