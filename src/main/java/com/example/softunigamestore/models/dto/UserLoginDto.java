@@ -1,7 +1,5 @@
 package com.example.softunigamestore.models.dto;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.Pattern;
 
 public class UserLoginDto {
 
