@@ -1,5 +1,6 @@
 package com.example.softunigamestore;
 
+import com.example.softunigamestore.models.dto.UserLoginDto;
 import com.example.softunigamestore.models.dto.UserRegisterDto;
 import com.example.softunigamestore.services.UserService;
 import org.springframework.boot.CommandLineRunner;
@@ -30,6 +31,12 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
             switch (command) {
                 case "RegisterUser":
                     userService.registerUser(new UserRegisterDto(commands[1], commands[2], commands[3], commands[4]));
+                    break;
+                case "LoginUser":
+                    userService.loginUser(new UserLoginDto(commands[1], commands[2]));
+                    break;
+                case "Logout":
+                    userService.logout();
                     break;
             }
         }

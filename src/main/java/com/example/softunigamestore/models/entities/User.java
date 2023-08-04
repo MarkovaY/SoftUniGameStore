@@ -27,7 +27,8 @@ public class User extends BaseEntity{
         this.games = games;
     }
 
-    public boolean isAdmin() {
+    @Column(name = "is_admin")
+    public boolean getAdmin() {
         return isAdmin;
     }
 
