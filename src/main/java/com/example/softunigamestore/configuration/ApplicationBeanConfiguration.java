@@ -20,14 +20,6 @@ public class ApplicationBeanConfiguration {
 
         modelMapper.typeMap(GameAddDto.class, Game.class).addMappings(mapper -> mapper.map(GameAddDto::getThumbnailURL, Game::setImageThumbnail));
 
-        Converter<String, LocalDate> localDateConverter = new Converter<String, LocalDate>() {
-            @Override
-            public LocalDate convert(MappingContext<String, LocalDate> mappingContext) {
-                return mappingContext.getSource() == null ? LocalDate.now() : LocalDate.parse(mappingContext.getSource(), DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-            }
-        };
-
-        modelMapper.addConverter(localDateConverter);
         return modelMapper;
     }
 }

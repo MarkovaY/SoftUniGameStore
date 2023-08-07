@@ -17,12 +17,12 @@ public class GameAddDto {
     private String trailer;
     private String thumbnailURL;
     private String description;
-    private String releaseDate;
+    private LocalDate releaseDate;
 
     public GameAddDto() {
     }
 
-    public GameAddDto(String title, BigDecimal price, Double size, String trailer, String thumbnailURL, String description, String releaseDate) {
+    public GameAddDto(String title, BigDecimal price, Double size, String trailer, String thumbnailURL, String description, LocalDate releaseDate) {
         this.title = title;
         this.price = price;
         this.size = size;
@@ -94,11 +94,11 @@ public class GameAddDto {
         this.description = description;
     }
 
-    public String getReleaseDate() {
+    public LocalDate getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(String releaseDate) {
+    public void setReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
     }
 }
